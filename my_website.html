@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>程超凡的个人主页</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 侧边栏导航 -->
+    <aside class="sidebar">
+        <!-- 个人照片和描述 -->
+        <div class="profile">
+            <img src="images/我的照片.jpg" alt="我的照片" class="profile-photo">
+            <p class="profile-description">你好，我是[程超凡]，一名来自cuhksz的计算机科学专业的学生，热衷于开发创新的解决方案。</p>
+        </div>
+
+        <!-- 导航栏 -->
+        <nav>
+            <ul>
+                <li><a href="#about">关于我</a></li>
+                <li><a href="#portfolio">作品集</a></li>
+                <li><a href="#experience">经历</a></li>
+                <li><a href="#contact">联系我</a></li>
+            </ul>
+        </nav>
+    </aside>
+    <!-- 主内容 -->
+    <main class="content">
+        <!-- 关于我 -->
+        <section id="about" class="animate">
+            <h1>你好，我是[程超凡]</h1>
+            <p>我是一个专注于开发和设计的计算机科学学生，热衷于创建创新的解决方案。</p>
+        </section>
+
+        <!-- 作品集 -->
+                <!-- 作品集部分 -->
+        <section id="portfolio" class="animate">
+            <h2>我的作品集</h2>
+            
+            <a href="https://github.com/Kuma-336/computer-architecture/tree/cputest" target="_blank" class="portfolio-item">
+                <span class="portfolio-date">2023 — 2024</span>
+                <h3>CPU</h3>
+                <p class="portfolio-role"></p>
+                <p>一个5级管道cCPU使用Verilog语言，可以执行MIPS指令，我们提供了指令存储模块以及数据存储模块。</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Verilog</span>
+                    <span class="tech-tag">CPU</span>
+                    <span class="tech-tag">MIPS</span>
+                    <span class="tech-tag">5-stage pipeline</span>
+                </div>
+            </a>
+
+            <a href="https://bb.cuhk.edu.cn/" target="_blank" class="portfolio-item">
+                <span class="portfolio-date">2022 — 2023</span>
+                <h3>AI视频人脸检测真假</h3>
+                <p class="portfolio-role">强化学习，machine learning</p>
+                <p>设计并开发用户友好的移动应用，集成API并优化加载时间。重点关注交互式UI开发，确保跨设备的响应性。</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">Machine Learning</span>
+                    <span class="tech-tag">Deepfake Face Recognition</span>
+                    <span class="tech-tag">Face</span>
+                </div>
+            </a>
+            <a href="https://github.com/Kuma-336/Machine-learning" target="_blank" class="portfolio-item">
+                <span class="portfolio-date">2022 — 2023</span>
+                <h3>阿拉伯数字图像识别</h3>
+                <p class="portfolio-role">强化学习，machine learning</p>
+                <p>设计并开发用户友好的移动应用，集成API并优化加载时间。重点关注交互式UI开发，确保跨设备的响应性。</p>
+                <div class="tech-stack">
+                    <span class="tech-tag">React Native</span>
+                    <span class="tech-tag">Node.js</span>
+                    <span class="tech-tag">TypeScript</span>
+                </div>
+            </a>
+
+        </section>
+
+        
+        
+        
+        <!-- 经历部分 -->
+       <!-- 经历部分 -->
+       <!-- 经历部分 -->
+       <section id="experience" class="animate">
+           <h2>经历</h2>
+       
+           <a href="images/奖学金获奖证明1.jpg" target="_blank" class="experience-item">
+               <img src="images/奖学金获奖证明.jpg" alt="公司1的项目图像" class="experience-image">
+               <div class="experience-content">
+                   <h3>奖学金获得</h3>
+                   <p>获得过香港中文大学（深圳）的入学奖学金，和博文奖学金共计95000 cover每年学费</p>
+                   <span>2021年9月 - 2025年6月</span>
+               </div>
+           </a>
+       
+           <a href="images/实习证明.pdf" target="_blank" class="experience-item">
+               <img src="images/屏幕截图 2024-10-30 183128.jpg.png" alt="项目2的图像" class="experience-image">
+               <div class="experience-content">
+                   <h3>实习生 - [中移建设有限公司广东分公司]</h3>
+                   <p>运维实习生。</p>
+                   <span>2022年7.2 - 2023年8.30
+                   </span>
+               </div>
+           </a>
+
+           <a href="https://github.com/Kuma-336/Mathematical-Modeling-Competition/tree/main" target="_blank" class="experience-item">
+            <img src="images/数学建模大赛.jpg" alt="项目2的图像" class="experience-image">
+            <div class="experience-content">
+                <h3>数学建模大赛：合理规划一个山村一年的种植计划</h3>
+                <p>这是一个复杂的优化约束问题，因为只完成了2/3，所以只获得了优胜奖</p>
+                <span>2024年9月</span>
+            </div>
+            </a>
+       
+       </section>
+
+        
+        
+
+        <!-- 联系方式 -->
+        <section id="contact" class="animate">
+            <h2>联系我</h2>
+            <p>你可以通过以下方式联系我：</p>
+            <ul>
+                <li>Email: 121090087@link.cuhk.edu.cn</li>
+                <li>GitHub: <a href="https://github.com/Kuma-336" target="_blank">github.com/Kuma-336</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+<!-- 页脚社交链接 -->
+<footer class="social-footer">
+    <ul class="social-links">
+        <li><a href="https://github.com/yourprofile" target="_blank"><img src="icons/github.png" alt="GitHub"></a></li>
+        <li><a href="https://www.linkedin.com/in/yourprofile" target="_blank"><img src="icons/linkedin.png" alt="LinkedIn"></a></li>
+        <li><a href="https://codepen.io/yourprofile" target="_blank"><img src="icons/codepen.png" alt="CodePen"></a></li>
+        <li><a href="https://www.instagram.com/yourprofile" target="_blank"><img src="icons/instagram.png" alt="Instagram"></a></li>
+        <li><a href="https://twitter.com/yourprofile" target="_blank"><img src="icons/twitter.png" alt="Twitter"></a></li>
+    </ul>
+</footer>
+
+</html>
