@@ -16,12 +16,12 @@ export default function Home() {
         {/* 首屏介绍区 */}
         <div className="text-center px-4 mb-32 max-w-4xl flex flex-col items-center">
           
-          <div className="w-40 h-40 md:w-48 md:h-48 rounded-full border-4 border-[#ffd700]/30 p-1 mb-10 shadow-[0_0_40px_rgba(255,215,0,0.15)] overflow-hidden relative group cursor-pointer transition-all hover:border-[#ffd700]">
-            <Image 
-              src="/me.jpg" 
+          <div className="w-40 h-40 md:w-98 md:h-98 rounded-full border-4 border-[#ffd700]/30 p-1 mb-10 shadow-[0_0_40px_rgba(255,215,0,0.15)] overflow-hidden relative group cursor-pointer transition-all hover:border-[#ffd700]">
+            {/* 🚀 放弃 Next.js Image 组件，使用原生 img 标签，并使用 ./me.jpg 相对路径 🚀 */}
+            <img 
+              src="./me.jpg" 
               alt="Chao Fan Cheng (Levi)" 
-              fill 
-              className="rounded-full object-cover brightness-50 contrast-125 transition-all duration-700 group-hover:brightness-110 group-hover:contrast-100 group-hover:scale-125" 
+              className="w-full h-full rounded-full object-cover brightness-50 contrast-125 transition-all duration-500 group-hover:brightness-110 group-hover:contrast-100 group-hover:scale-115" 
             />
           </div>
 
