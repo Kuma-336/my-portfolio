@@ -29,12 +29,27 @@ export default function Home() {
       eduCUHKTech: "Relevant Courses: ML, Algo Design, OS | Bowen Scholarship (Full Tuition)",
       skillTitle: "Tech Stack",
       projectTitle: "Featured Projects",
-      proj1Title: "Medical AI Agent",
-      proj1Desc: "A demonstration medical multi-agent system deeply integrating doctors, patients, and AI assistants to realize complex business loops and interactive responses.",
-      proj2Title: "Vision-based Ball-picking Robot",
-      proj2Desc: "Independently developed a physical robot based on CV, completing the full cycle from core visual algorithm design, motion control logic to system integration.",
-      proj3Title: "High-Concurrency Delivery Platform",
-      proj3Desc: "A mature backend architecture integrating microservices, multi-level caching, and containerized deployment to support high-concurrency ordering.",
+      proj1Title: "RAG Knowledge Base & Text2SQL",
+      proj1Desc: "Independently built a production-oriented knowledge base QA system supporting Word, PDF, and Excel documents, scaling beyond 100,000 vector chunks.",
+      proj1Details: [
+        "Built the full retrieval pipeline with document parsing, chunking, BGE embeddings, ChromaDB vector search, BM25, RRF fusion, and Cross-Encoder reranking.",
+        "Added Text2SQL for exact part-number, price, and inventory queries, combining product context retrieval with precise SQL queries over Excel inventory data.",
+        "Implemented parent-child chunking, query rewriting, multi-query expansion, near-duplicate filtering, retrieval tracing, and evaluations using Recall@K, MRR, Hit Rate, and P95 latency.",
+        "Diagnosed HNSW recall failures caused by dense clusters of duplicate vectors, then introduced file deduplication and near-duplicate filtering to improve recall stability.",
+      ],
+      proj2Title: "Data Agent — Agent Harness for Analytics",
+      proj2Desc: "Independently designed a FastAPI-based Agent Harness that provides an extensible, governed runtime for structured-data analysis.",
+      proj2Details: [
+        "Connected context assembly, the LLM tool-calling loop, tool execution, deterministic validation, run logging, and SSE streaming feedback.",
+        "Designed a pluggable Hook + Policy pipeline covering retries, timeouts, call budgets, tool deny-lists, high-risk approvals, schema validation, sensitive-field masking, and output truncation; approval records are bound to argument fingerprints.",
+        "Implemented layered context and memory management with asynchronous conversation compression, long-term memory extraction, and user-isolated memory injection.",
+        "Built a lightweight Text2SQL semantic layer with schema and business-rule injection, read-only SQL guards, per-user resource isolation, and result-row limits.",
+        "Exposed Agent, controlled SQL, context, and reporting capabilities through Streamable HTTP MCP, secured by per-user tokens, isolation, read-only transactions, and capability flags.",
+      ],
+      proj3Title: "Vision-based Ball-picking Robot",
+      proj3Desc: "Independently developed a physical robot based on CV, completing the full cycle from core visual algorithm design, motion control logic to system integration.",
+      proj4Title: "High-Concurrency Delivery Platform",
+      proj4Desc: "A mature backend architecture integrating microservices, multi-level caching, and containerized deployment to support high-concurrency ordering.",
     },
     zh: {
       toggle: "EN",
@@ -53,12 +68,27 @@ export default function Home() {
       eduCUHKTech: "相关课程：机器学习，算法设计，操作系统 | 博文奖学金 (全额学费)",
       skillTitle: "技术栈核心",
       projectTitle: "精选项目",
-      proj1Title: "医疗多智能体系统 (Medical Agent)",
-      proj1Desc: "一个演示性质的医疗多智能体系统，深度集成了医生、患者和智能助手三个角色，实现了复杂的业务闭环与交互响应。",
-      proj2Title: "视觉智能拾球机器人",
-      proj2Desc: "独立研发基于计算机视觉识别的实体机器人，完成了从核心视觉算法设计、运动控制逻辑到全系统集成测试的完整闭环。",
-      proj3Title: "高并发外卖后端平台",
-      proj3Desc: "成熟的后端系统架构，完美整合了微服务组件、多级缓存机制和容器化部署，有效支撑高并发点餐访问与复杂的订单状态流转。",
+      proj1Title: "RAG 知识库问答与 Text2SQL",
+      proj1Desc: "独立负责面向生产场景的知识库问答模块，支持 Word、PDF、Excel 等文件类型，知识库规模达到 100,000+ 向量 Chunk。",
+      proj1Details: [
+        "基于 FastAPI、ChromaDB、BGE Embedding 构建文档解析、Chunk 切分、向量检索、BM25 关键词检索、RRF 融合及 Cross-Encoder Rerank 完整链路。",
+        "针对外贸库存表中“料号—价格—库存”类精确查询接入 Text2SQL，以向量检索提供产品上下文，通过 SQL 对 Excel 库存表执行精确字段查询。",
+        "实现父子分块、查询改写、多路查询扩展、近似重复过滤与检索 Trace；搭建测试集生成、人工审核以及 Recall@K、MRR、Hit Rate、P95 延迟评测机制。",
+        "定位 ChromaDB HNSW 因数万条近重复向量形成高密度簇而异常漏召回的问题，引入文件去重与近似重复过滤，改善向量空间分布及召回稳定性。",
+      ],
+      proj2Title: "Data Agent — 面向数据分析的 Agent Harness",
+      proj2Desc: "独立设计并实现基于 FastAPI 的 Agent Harness，为结构化数据分析提供可扩展、可治理的模型工具调用运行环境。",
+      proj2Details: [
+        "打通 Context 组装、LLM Tool Calling 循环、工具执行、确定性校验、运行记录及 SSE 流式反馈链路。",
+        "设计可插拔的 Hook + Policy 治理链路，覆盖重试、超时、调用预算、工具黑名单、高风险审批、Schema 校验、敏感字段脱敏与输出截断；使用参数指纹绑定审批记录。",
+        "实现多层 Context / Memory 管理，通过异步 Worker 完成对话压缩与长期 Memory 提取，并按用户隔离注入有效记忆。",
+        "为 Text2SQL 构建轻量语义层，注入数据源 Schema 与业务规则，并结合只读 SQL Guard、用户级资源隔离及结果行数限制。",
+        "提供 Streamable HTTP MCP 接口，将 Agent、受控 SQL、上下文和报告能力开放给外部客户端，通过用户级 Token、资源隔离、只读事务及能力开关确保调用受控。",
+      ],
+      proj3Title: "视觉智能拾球机器人",
+      proj3Desc: "独立研发基于计算机视觉识别的实体机器人，完成了从核心视觉算法设计、运动控制逻辑到全系统集成测试的完整闭环。",
+      proj4Title: "高并发外卖后端平台",
+      proj4Desc: "成熟的后端系统架构，整合微服务组件、多级缓存机制和容器化部署，有效支撑高并发点餐访问与复杂的订单状态流转。",
     }
   };
 
@@ -134,22 +164,30 @@ export default function Home() {
         {/* 项目展示区 */}
         <div className="w-full max-w-7xl px-6">
           <h2 className="text-center text-4xl font-bold mb-16 text-white tracking-tight">{t.projectTitle}</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             <TiltCard 
               title={t.proj1Title} 
               desc={t.proj1Desc}
-              tech="Next.js | TypeScript | React | AI API"
+              details={t.proj1Details}
+              tech="FastAPI | ChromaDB | BGE | BM25 | RRF | Text2SQL"
               href="https://github.com/kuma-336" 
             />
             <TiltCard 
               title={t.proj2Title} 
               desc={t.proj2Desc}
-              tech="Python | Computer Vision | Motion Control"
+              details={t.proj2Details}
+              tech="FastAPI | LLM Tool Calling | SSE | Text2SQL | MCP"
               href="https://github.com/kuma-336" 
             />
             <TiltCard 
               title={t.proj3Title} 
               desc={t.proj3Desc}
+              tech="Python | Computer Vision | Motion Control"
+              href="https://github.com/kuma-336"
+            />
+            <TiltCard
+              title={t.proj4Title}
+              desc={t.proj4Desc}
               tech="Java | Docker | Nginx | MySQL | Redis"
               href="https://github.com/kuma-336" 
             />

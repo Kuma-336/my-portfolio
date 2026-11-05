@@ -2,7 +2,19 @@
 import { useState, useRef } from "react";
 
 // 1. 增加了可选的 href 属性
-export default function TiltCard({ title, desc, tech, href }: { title: string; desc: string; tech: string; href?: string }) {
+export default function TiltCard({
+  title,
+  desc,
+  details,
+  tech,
+  href,
+}: {
+  title: string;
+  desc: string;
+  details?: string[];
+  tech: string;
+  href?: string;
+}) {
   // 这里我们保持 perspective 角度，但缩放倍数轻微增加
   const [transform, setTransform] = useState("perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)");
   const cardRef = useRef<HTMLDivElement>(null);
@@ -32,7 +44,17 @@ export default function TiltCard({ title, desc, tech, href }: { title: string; d
     >
       <div style={{ transform: "translateZ(30px)" }}>
         <h3 className="text-2xl font-bold text-[#ffd700] mb-3">{title}</h3>
-        <p className="text-slate-300 mb-6 flex-grow">{desc}</p>
+        <p className="text-slate-300 leading-relaxed mb-4 flex-grow">{desc}</p>
+        {details && (
+          <ul className="mb-6 space-y-3 text-sm leading-relaxed text-slate-300">
+            {details.map((detail) => (
+              <li key={detail} className="flex gap-3">
+                <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-[#ffd700]" />
+                <span>{detail}</span>
+              </li>
+            ))}
+          </ul>
+        )}
         <div className="text-sm text-[#00e5ff] font-mono">{tech}</div>
       </div>
     </div>
